@@ -1,0 +1,24 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="container">
+		<div class="converter">
+			<h2>Celsius to Fahrenheit converter</h2>
+			<div class="input-box">
+				<input type="text" name="converter" id="celv" placeholder="Enter Celsius Value(°C)"><br>
+				<button onclick="converter()">Submit</button>
+			</div>
+			<div id="result"></div>
+		</div>		
+	</div>
+	<script>
+		function converter(){
+			let celsius=Number(document.getElementById("celv").value)
+			let fare=celsius*1.8+32
+			document.getElementById("result").innerHTML=`${fare} °F`
+		}
+	</script>
+</body>
+</html>
